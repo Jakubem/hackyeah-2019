@@ -1,0 +1,27 @@
+{
+  "name": "hackyeah-2019",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "dependencies": {
+    "parcel": "^1.12.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "parcel": "parcel index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jakubem/hackyeah-2019.git"
+  },
+  "keywords": [
+    "meat",
+    "waste"
+  ],
+  "author": "Goldarium Team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Jakubem/hackyeah-2019/issues"
+  },
+  "homepage": "https://github.com/Jakubem/hackyeah-2019#readme"
+}
