@@ -11,47 +11,66 @@
 
 <body>
   <main>
-    <section id="">
-      <h1>Meat water usage calculator</h1>
-      <p>
-        copy
-      </p>
+    <section class="intro">
+      <h1 class="main-headline">
+        <img class="water-drop"></img>
+        Meat production is responsible for more than one-quater of our water footprint.
+      </h1>
+      <strong class="main-subheadline">Why is this important?</strong>
     </section>
     <section>
-      <article>
-          <fieldset class="kinds-of-meat">
+      <h3 class="secondary-headline">See how much water is used<br> for the meat that you eat:</h3>
+      <article class="calculator">
+        <fieldset class="kinds-of-meat">
+          <label class="kinds-of-meat__product">
+            <img class="kinds-of-meat__animal" src="./src/assets/img/cow.svg" alt="">
+            <input class="kinds-of-meat__radio" type="radio" name="food-type" value="beef" checked="checked">
+            <span class="kinds-of-meat__label-copy">Beef</span>
+          </label>
 
-            <label class="kinds-of-meat__product">
-              <img class="kinds-of-meat__animal" src="./src/assets/img/cow.svg" alt="">
-              <input class="kinds-of-meat__radio" type="radio" name="food-type" value="beef" checked="checked">
-              <span class="kinds-of-meat__label-copy">Beef</span>
-            </label>
+          <label class="kinds-of-meat__product">
+            <img class="kinds-of-meat__animal" src="./src/assets/img/pig.svg" alt="">
+            <input class="kinds-of-meat__radio" type="radio" name="food-type" value="pork">
+            <span class="kinds-of-meat__label-copy">Pork</span>
+          </label>
 
-            <label class="kinds-of-meat__product">
-              <img class="kinds-of-meat__animal" src="./src/assets/img/pig.svg" alt="">
-              <input class="kinds-of-meat__radio" type="radio" name="food-type" value="pork">
-              <span class="kinds-of-meat__label-copy">Pork</span>
-            </label>
+          <label class="kinds-of-meat__product">
+            <img class="kinds-of-meat__animal" src="./src/assets/img/sheep.svg" alt="">
+            <input class="kinds-of-meat__radio" type="radio" name="food-type" value="lamb">
+            <span class="kinds-of-meat__label-copy">Lamb</span>
+          </label>
 
-            <label class="kinds-of-meat__product">
-              <img class="kinds-of-meat__animal" src="./src/assets/img/sheep.svg" alt="">
-              <input class="kinds-of-meat__radio" type="radio" name="food-type" value="lamb">
-              <span class="kinds-of-meat__label-copy">Lamb</span>
-            </label>
+          <label class="kinds-of-meat__product">
+            <img class="kinds-of-meat__animal" src="./src/assets/img/chicken.svg" alt="">
+            <input class="kinds-of-meat__radio" type="radio" name="food-type" value="chicken">
+            <span class="kinds-of-meat__label-copy">Chicken</span>
+          </label>
+        </fieldset>
 
-            <label class="kinds-of-meat__product">
-              <img class="kinds-of-meat__animal" src="./src/assets/img/chicken.svg" alt="">
-              <input class="kinds-of-meat__radio" type="radio" name="food-type" value="chicken">
-              <span class="kinds-of-meat__label-copy">Chicken</span>
-            </label>
-            
-          </fieldset>
-        <label for="meat-quantity">Enter quantity of meat</label>
-        <input class="__radio" type="range" min="0" max="1000" id="meat-quantity" placeholder="grams">
-        <label for="interval">Enter Interval</label>
-        <input class="__radio" type="range" min="0" max="7" id="interval">
+        <div class="range__ui">
+        <div class="range__wrap">
+          <label for="meat-quantity">Enter quantity of meat (g):</label>
+          <div class="range__input-wrap">
+            <input class="range" type="range" min="0" max="1000" step="50" id="meat-quantity" placeholder="grams">
+            <output class="meat-quantity__output"></output>
+          </div>
+        </div>
+
+        <div class="range__wrap">
+          <label for="interval">Enter Interval (times per week):</label>
+          <div class="range__input-wrap">
+            <input class="range" type="range" min="0" max="7" id="interval">
+            <output class="interval__output"></output>
+          </div>
+        </div>
+      </div>
+
+        <h3>And that equals to:</h3>
+        <div class="bottle-output">
+        </div>
+
       </article>
-      <div class="display"></div>
+      <output class="display"></output>
     </section>
   </main>
 

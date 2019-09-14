@@ -1,0 +1,41 @@
+input[type=range] {
+  -webkit-appearance: none;
+  background: transparent;
+}
+
+/* Special styling for WebKit/Blink */
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+  background: $c-black;
+  cursor: pointer;
+  margin-top: -14px;
+}
+
+/* All the same stuff for Firefox */
+input[type=range]::-moz-range-thumb {
+  height: 14px;
+  width: 14px;
+  border: 0;
+  border-radius: 50%;
+  background: $c-black;
+  cursor: pointer;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  height: 3px;
+  cursor: pointer;
+  background: $c-black;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: $c-black;
+}
+
+input[type=range]::-moz-range-track {
+  height: 3px;
+  cursor: pointer;
+  background: $c-black;
+}

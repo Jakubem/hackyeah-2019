@@ -1,24 +1,72 @@
 @import 'var';
+@import 'range';
+* {
+  box-sizing: border-box;
+}
+
+@mixin fontSize($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.intro {
+  background-color: $c-blue-d;
+  height: 150px;
+  padding: 2rem;
+}
+
+.main-headline {
+  margin-top: 0;
+  color: $c-white;
+}
+
+.main-subheadline {
+  color: $c-white;
+}
+
+.secondary-headline {
+  text-align: center;
+  margin: 15px auto;
+  background-color: $c-lightgray;
+  padding: 1rem;
+  max-width: 350px;
+}
 
 .calculator {
-  width: 500px;
-  padding: 2rem;
-  border: 1px solid $c-black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .kinds-of-meat {
-  width: 500px;
   display: flex;
   border: 0;
   &__product {
-    padding: 1rem;
-    margin: 1rem;
+    margin: 2rem 1rem;
+    width: 100px;
+    height: 100px;
     color: $c-black;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
+    &::after {
+      content: '';
+      top: 5px;
+      left: 5px;
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background-color: $c-blue-d;
+      z-index: -2;
+    }
   }
 
   &__radio {
@@ -28,8 +76,8 @@
   }
 
   &__animal {
-    width: 40px;
-    filter: grayscale(1);
+    width: 60px;
+    filter: grayscale(.4);
   }
 
   &__label-copy::before {
@@ -40,9 +88,34 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: #ff0;
+    background-color: $c-lightgray;
   }
   &__radio:checked + .kinds-of-meat__label-copy::before {
-    background-color: #f0f;
+    background-color: $c-gray;
+  }
+}
+
+.range {
+  max-width: 300px;
+  &__ui {
+    display: flex;
+    justify-content: space-around;
+  }
+  &__input-wrap {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.bottle-output {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  &__item {
+    margin-top: 2px;
+    width: 10px;
   }
 }
