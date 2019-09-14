@@ -1,14 +1,25 @@
 import * as Helpers from './utils/helpers';
 
+const data = Helpers.getMetadata();
 
-const button = document.querySelector('#check');
-button.addEventListener('click', (e) => {
+const config = {};
+
+window.config = config;
+
+const render = () => {
     const quantity = document.querySelector('#meat-quantity').value || 1;
     const interval = document.querySelector('#interval').value || 1;
 
     const amount = quantity / 1000;
-    const data = Helpers.getMetadata();
-    const beef = data.find(product => product.name === 'beef');
+    const meetTypeMultiplier = data.find(product => product.name === config.type).waterPerKg;
+    document.querySelector('.display').innerHTML = meetTypeMultiplier * amount * interval / 1000; // 1000 makes it liters 
+}
 
-    document.write(`${beef.waterPerKg * amount * interval}ml`);
+Object.defineProperty(config, 'type', {
+    get() {
+        return document.querySelector('input[name="food-type"]:checked').value;
+    },
 });
+
+document.querySelectorAll('input').forEach(e => e.addEventListener('click', render));
+
