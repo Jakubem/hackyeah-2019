@@ -6,7 +6,9 @@
   "dependencies": {
     "parcel": "^1.12.3"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "sass": "^1.22.12"
+  },
   "scripts": {
     "parcel": "parcel index.html"
   },
