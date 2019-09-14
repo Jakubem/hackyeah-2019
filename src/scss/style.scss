@@ -3,5 +3,46 @@
 .calculator {
   width: 500px;
   padding: 2rem;
-  border: 1px solid #000;
+  border: 1px solid $c-black;
+}
+
+.kinds-of-meat {
+  width: 500px;
+  display: flex;
+  border: 0;
+  &__product {
+    padding: 1rem;
+    margin: 1rem;
+    color: $c-black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  &__radio {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+
+  &__animal {
+    width: 40px;
+    filter: grayscale(1);
+  }
+
+  &__label-copy::before {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #ff0;
+  }
+  &__radio:checked + .kinds-of-meat__label-copy::before {
+    background-color: #f0f;
+  }
 }

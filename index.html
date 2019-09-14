@@ -19,26 +19,37 @@
     </section>
     <section>
       <article>
+          <fieldset class="kinds-of-meat">
+
+            <label class="kinds-of-meat__product">
+              <img class="kinds-of-meat__animal" src="./src/assets/img/cow.svg" alt="">
+              <input class="kinds-of-meat__radio" type="radio" name="food-type" value="beef" checked="checked">
+              <span class="kinds-of-meat__label-copy">Beef</span>
+            </label>
+
+            <label class="kinds-of-meat__product">
+              <img class="kinds-of-meat__animal" src="./src/assets/img/pig.svg" alt="">
+              <input class="kinds-of-meat__radio" type="radio" name="food-type" value="pork">
+              <span class="kinds-of-meat__label-copy">Pork</span>
+            </label>
+
+            <label class="kinds-of-meat__product">
+              <img class="kinds-of-meat__animal" src="./src/assets/img/sheep.svg" alt="">
+              <input class="kinds-of-meat__radio" type="radio" name="food-type" value="lamb">
+              <span class="kinds-of-meat__label-copy">Lamb</span>
+            </label>
+
+            <label class="kinds-of-meat__product">
+              <img class="kinds-of-meat__animal" src="./src/assets/img/chicken.svg" alt="">
+              <input class="kinds-of-meat__radio" type="radio" name="food-type" value="chicken">
+              <span class="kinds-of-meat__label-copy">Chicken</span>
+            </label>
+            
+          </fieldset>
         <label for="meat-quantity">Enter quantity of meat</label>
-        <input type="range" min="0" max="1000" id="meat-quantity" placeholder="grams">
+        <input class="__radio" type="range" min="0" max="1000" id="meat-quantity" placeholder="grams">
         <label for="interval">Enter Interval</label>
-        <input type="range" min="0" max="7" id="interval">
-        <label>
-          Beef
-          <input type="radio" name="food-type" value="beef" checked="checked">
-        </label>
-        <label>
-          Pork
-          <input type="radio" name="food-type" value="pork">
-        </label>
-        <label>
-          Lamb
-          <input type="radio" name="food-type" value="lamb">
-        </label>
-        <label>
-          Chicken
-          <input type="radio" name="food-type" value="chicken">
-        </label>
+        <input class="__radio" type="range" min="0" max="7" id="interval">
       </article>
       <div class="display"></div>
     </section>
