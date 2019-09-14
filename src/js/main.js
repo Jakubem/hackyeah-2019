@@ -12,7 +12,8 @@ const render = () => {
 
     const amount = quantity / 1000;
     const meetTypeMultiplier = data.find(product => product.name === config.type).waterPerKg;
-    document.querySelector('.display').innerHTML = meetTypeMultiplier * amount * interval / 1000; // 1000 makes it liters 
+    const value = Number(Number.parseFloat(`${meetTypeMultiplier * amount * interval / 1000}`).toFixed(2)); // 1000 makes it liters 
+    document.querySelector('.display').innerHTML = value; 
 }
 
 Object.defineProperty(config, 'type', {
@@ -21,5 +22,5 @@ Object.defineProperty(config, 'type', {
     },
 });
 
-document.querySelectorAll('input').forEach(e => e.addEventListener('click', render));
+document.querySelectorAll('input').forEach(e => e.addEventListener('input', render));
 
