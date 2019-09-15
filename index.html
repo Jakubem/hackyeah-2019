@@ -21,7 +21,7 @@
     <section>
       <h3 class="secondary-headline">See how much water is used<br> for the meat that you eat:</h3>
       <article class="calculator">
-        <fieldset class="kinds-of-meat">
+        <div role="fieldset" class="kinds-of-meat">
           <label class="kinds-of-meat__product">
             <img class="kinds-of-meat__animal" src="./src/assets/img/cow.svg" alt="">
             <input class="kinds-of-meat__radio" type="radio" name="food-type" value="beef" checked="checked">
@@ -45,21 +45,21 @@
             <input class="kinds-of-meat__radio" type="radio" name="food-type" value="chicken">
             <span class="kinds-of-meat__label-copy">Chicken</span>
           </label>
-        </fieldset>
+        </div>
 
         <div class="range__ui">
         <div class="range__wrap">
-          <label for="meat-quantity">Enter quantity of meat (g):</label>
+          <label for="meat-quantity">Amount per meal (g):</label>
           <div class="range__input-wrap">
-            <input class="range" type="range" min="0" max="1000" step="50" id="meat-quantity" placeholder="grams">
+            <input class="range" type="range" min="0" max="1000" value="100" step="50" id="meat-quantity" placeholder="grams">
             <output class="meat-quantity__output"></output>
           </div>
         </div>
 
         <div class="range__wrap">
-          <label for="interval">Enter Interval (times per week):</label>
+          <label for="interval">Amount per week:</label>
           <div class="range__input-wrap">
-            <input class="range" type="range" min="0" max="7" id="interval">
+            <input class="range" type="range" min="0" max="7" value="1" id="interval">
             <output class="interval__output"></output>
           </div>
         </div>
