@@ -10,7 +10,8 @@
     "sass": "^1.22.12"
   },
   "scripts": {
-    "parcel": "parcel index.html"
+    "parcel": "parcel index.html",
+    "build": "parcel build index.html"
   },
   "repository": {
     "type": "git",
