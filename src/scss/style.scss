@@ -9,12 +9,31 @@
   font-size: calculateRem($size);
 }
 
-.display {
+.bottle-output {
   text-align: center;
-  width: 100%;
+  font-weight: 900;
+}
+
+.display {
+  width: 700px;
+  height: 100px;
   display: block;
   font-weight: bold;
   font-size: 2em;
+  background-image: url('../assets/img/bottle.svg');
+  background-repeat: repeat;
+  background-size: 50px 60px;
+  margin: 80px auto;
+  position: relative;
+  // &::after {
+    // content: '';
+    // position: absolute;
+    // width: 100%;
+    // left: 0;
+    // bottom: 0;
+    // height: 180px;
+    // background-image: linear-gradient(to bottom, rgb(255, 255, 255, 0), rgb(255, 255, 255, 1));
+  // }
 }
 
 html, body {
@@ -23,15 +42,34 @@ html, body {
   height: 100%;
 }
 
+body {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  font-family: 'Roboto', sans-serif;
+}
+
 .intro {
   background-color: $c-blue-d;
-  height: 150px;
+  // margin-top: 10px;
   padding: 2rem;
+  position: relative;
+  // &::after {
+    // content: '';
+    // position: absolute;
+    // display: block;
+    // top: 0;
+    // bottom: 0;
+    // height: 480px;
+    // border-top: 18px dotted $c-gray;
+    // border-bottom: 18px dotted $c-gray;
+  // }
 }
 
 .main-headline {
-  margin-top: 0;
+  margin: 0 15px;
   color: $c-white;
+  font-size: 3rem;
 }
 
 .main-subheadline {
@@ -39,11 +77,13 @@ html, body {
 }
 
 .secondary-headline {
+  max-width: 500px;
   text-align: center;
   margin: 15px auto;
+  margin-top: 3rem;
   background-color: $c-lightgray;
-  padding: 1rem;
-  max-width: 350px;
+  padding: 2rem;
+  font-size: 1.5rem;
 }
 
 .calculator {
@@ -111,6 +151,7 @@ html, body {
   &__ui {
     display: flex;
     justify-content: space-around;
+    width: 500px;
   }
   &__input-wrap {
     margin-top: 10px;
@@ -121,12 +162,19 @@ html, body {
   }
 }
 
-.bottle-output {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  &__item {
-    margin-top: 2px;
-    width: 10px;
-  }
+.footer {
+  margin: 0;
+  background-color: $c-blue-d;
+  color: $c-white;
+  padding: 1rem;
 }
+
+.sources {
+  margin: 0;
+  list-style: none;
+}
+
+.source {
+  color: $c-white;
+}
+

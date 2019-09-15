@@ -13,9 +13,10 @@ const render = () => {
   const amount = quantity / 1000;
   const meetTypeMultiplier = data.find(product => product.name === config.type).waterPerKg;
   const value = Number(Number.parseFloat(`${meetTypeMultiplier * amount * interval / 1000}`).toFixed(2)); // 1000 makes it liters
-  document.querySelector('.display').value = `${value} liters`;
-  document.querySelector('.meat-quantity__output').value = quantity;
+  document.querySelector('.bottle-output').value = `${value} liters`;
+  document.querySelector('.meat-quantity__output').value = `${quantity} g`;
   document.querySelector('.interval__output').value = interval;
+  document.querySelector('.display').style.height = `${value}px`
 }
 
 Object.defineProperty(config, 'type', {

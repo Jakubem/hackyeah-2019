@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="./src/scss/style.scss">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,900&display=swap" rel="stylesheet">
   <title>Water Waste Calculator</title>
 </head>
 
@@ -13,13 +14,13 @@
   <main>
     <section class="intro">
       <h1 class="main-headline">
-        <img class="water-drop"></img>
-        Meat production is responsible for more than one-quater of our water footprint.
+          Meat production is responsible<br> 
+          for more than one-quater<br> 
+          of water footprint
       </h1>
-      <strong class="main-subheadline">Why is this important?</strong>
     </section>
     <section>
-      <h3 class="secondary-headline">See how much water is used<br> for the meat that you eat:</h3>
+      <h3 class="secondary-headline">See how much water is used to produce the meat that you consume:</h3>
       <article class="calculator">
         <div role="fieldset" class="kinds-of-meat">
           <label class="kinds-of-meat__product">
@@ -51,7 +52,7 @@
         <div class="range__wrap">
           <label for="meat-quantity">Amount per meal (g):</label>
           <div class="range__input-wrap">
-            <input class="range" type="range" min="0" max="1000" value="100" step="50" id="meat-quantity" placeholder="grams">
+            <input class="range" type="range" min="0" max="1000" value="50" step="50" id="meat-quantity" placeholder="grams">
             <output class="meat-quantity__output"></output>
           </div>
         </div>
@@ -65,14 +66,20 @@
         </div>
       </div>
 
-        <h3>And that equals to:</h3>
-        <div class="bottle-output">
-        </div>
-
+      <h3>And that equals:</h3>
+      <output class="bottle-output"></output>
+      <div class="display"></div>
+      
       </article>
-      <output class="display"></output>
     </section>
   </main>
+  <footer class="footer">
+    <strong>Sources:</strong>
+    <ul class="sources">
+      <li><a class="source" href="https://docs.google.com/spreadsheets/d/1nzLDn1LbiwVe2TL4y4kiejuUQKpIx4Z3R5GHOguwvmo">IME food waste report (Google docs)</a></li>
+      <li><a class="source" href="https://www.peta.org/blog/how-to-save-219000-gallons-water-year/">What Can You Do to Save 219,000 Gallons of Water a Year?</a></li>
+    </ul>
+  </footer>
 
   <script src="./src/js/main.js"></script>
 </body>
