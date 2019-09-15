@@ -50,7 +50,7 @@
 
         <div class="range__ui">
         <div class="range__wrap">
-          <label for="meat-quantity">Amount per meal (g):</label>
+          <label class="copy-strong" for="meat-quantity">Consumption per meal (g):</label>
           <div class="range__input-wrap">
             <input class="range" type="range" min="0" max="1000" value="50" step="50" id="meat-quantity" placeholder="grams">
             <output class="meat-quantity__output"></output>
@@ -58,7 +58,7 @@
         </div>
 
         <div class="range__wrap">
-          <label for="interval">Amount per week:</label>
+          <label class="copy-strong" for="interval">Consumption per week:</label>
           <div class="range__input-wrap">
             <input class="range" type="range" min="0" max="7" value="1" id="interval">
             <output class="interval__output"></output>
@@ -66,15 +66,19 @@
         </div>
       </div>
 
-      <h3>And that equals:</h3>
-      <output class="bottle-output"></output>
+      <div class="out-wrapper">
+        <p class="bottle-disclaimer">
+          1 Bottle = 1 liter <span class="bottle-img"></span>
+        </p>
+        <strong class="copy-strong">Which equals:</strong>
+        <output class="bottle-output copy-strong"></output>
+      </div>
       <div class="display"></div>
-      
       </article>
     </section>
   </main>
   <footer class="footer">
-    <strong>Sources:</strong>
+    <strong>Source of data:</strong>
     <ul class="sources">
       <li><a class="source" href="https://docs.google.com/spreadsheets/d/1nzLDn1LbiwVe2TL4y4kiejuUQKpIx4Z3R5GHOguwvmo">IME food waste report (Google docs)</a></li>
       <li><a class="source" href="https://www.peta.org/blog/how-to-save-219000-gallons-water-year/">What Can You Do to Save 219,000 Gallons of Water a Year?</a></li>

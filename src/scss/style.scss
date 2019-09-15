@@ -4,11 +4,6 @@
   box-sizing: border-box;
 }
 
-@mixin fontSize($size) {
-  font-size: $size;
-  font-size: calculateRem($size);
-}
-
 .bottle-output {
   text-align: center;
   font-weight: 900;
@@ -23,17 +18,8 @@
   background-image: url('../assets/img/bottle.svg');
   background-repeat: repeat;
   background-size: 15px 20px;
-  margin: 80px auto;
+  margin: 30px auto;
   position: relative;
-  // &::after {
-    // content: '';
-    // position: absolute;
-    // width: 100%;
-    // left: 0;
-    // bottom: 0;
-    // height: 180px;
-    // background-image: linear-gradient(to bottom, rgb(255, 255, 255, 0), rgb(255, 255, 255, 1));
-  // }
 }
 
 html, body {
@@ -51,19 +37,21 @@ body {
 
 .intro {
   background-color: $c-blue-d;
-  // margin-top: 10px;
+  margin-top: 27px;
   padding: 2rem;
   position: relative;
-  // &::after {
-    // content: '';
-    // position: absolute;
-    // display: block;
-    // top: 0;
-    // bottom: 0;
-    // height: 480px;
-    // border-top: 18px dotted $c-gray;
-    // border-bottom: 18px dotted $c-gray;
-  // }
+  &::after {
+    content: '';
+    position: absolute;
+    display: block;
+    top: -20px;
+    bottom: 0;
+    left: 0;
+    height: 250px;
+    width: 100%;
+    border-top: 13px dotted $c-lightgray;
+    border-bottom: 13px dotted $c-lightgray;
+  }
 }
 
 .main-headline {
@@ -77,13 +65,21 @@ body {
 }
 
 .secondary-headline {
-  max-width: 500px;
+  max-width: 660px;
   text-align: center;
   margin: 15px auto;
-  margin-top: 3rem;
+  margin-top: 6rem;
   background-color: $c-lightgray;
-  padding: 2rem;
-  font-size: 1.5rem;
+  color: $c-blue-d;
+  font-weight: 400;
+  padding: 1rem 2rem;
+  font-size: 2rem;
+}
+
+.copy-strong {
+  color: $c-blue-d;
+  font-weight: 400;
+  font-size: 1rem;
 }
 
 .calculator {
@@ -96,9 +92,9 @@ body {
   display: flex;
   border: 0;
   &__product {
-    margin: 2rem 1rem;
-    width: 100px;
-    height: 100px;
+    margin: 4rem 2rem 5rem 2rem ;
+    width: 110px;
+    height: 110px;
     color: $c-black;
     display: flex;
     flex-direction: column;
@@ -107,11 +103,11 @@ body {
     position: relative;
     &::after {
       content: '';
-      top: 5px;
-      left: 5px;
+      top: 7px;
+      left: 7px;
       position: absolute;
-      width: 100px;
-      height: 100px;
+      width: 110px;
+      height: 110px;
       background-color: $c-blue-d;
       z-index: -2;
     }
@@ -124,8 +120,7 @@ body {
   }
 
   &__animal {
-    width: 60px;
-    filter: grayscale(.4);
+    width: 80px;
   }
 
   &__label-copy::before {
@@ -151,7 +146,8 @@ body {
   &__ui {
     display: flex;
     justify-content: space-around;
-    width: 500px;
+    width: 660px;
+    margin-bottom: 5rem;
   }
   &__input-wrap {
     margin-top: 10px;
@@ -166,11 +162,12 @@ body {
   margin: 0;
   background-color: $c-blue-d;
   color: $c-white;
-  padding: 1rem;
+  padding: 1rem 1rem 1rem 4rem;
 }
 
 .sources {
   margin: 0;
+  padding: 0;
   list-style: none;
 }
 
@@ -178,3 +175,25 @@ body {
   color: $c-white;
 }
 
+.out-wrapper {
+  position: relative;
+  text-align: center;
+  width: 710px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.bottle-disclaimer {
+  position: absolute;
+  right: 0;
+  bottom: -20px;
+}
+
+.bottle-img {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-image: url('../assets/img/bottle.svg');
+  background-size: 25px 25px;
+}
